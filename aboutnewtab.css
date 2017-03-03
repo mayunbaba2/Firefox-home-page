@@ -1,0 +1,301 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+@-moz-document url("about:newtab") {
+
+    
+
+/*ÆÁ±ÎÔªËØ*/
+#newtab-customize-button {display: none !important;}
+/*#newtab-search-container {display: none !important;}/*ËÑË÷¿òÒþ²Ø*/
+.newtab-control{display: none !important;}/*¿ØÖÆ°´Å¥Òþ²Ø*/
+/*.newtab-title{display: none !important;}/*ÍøÕ¾ÃûÒþ²Ø*/
+.newtab-link:hover .newtab-title {display: none !important;}/*ÐüÍ£ÏÔÊ¾Õ¾µãÃû£¬¾Í²»ÏÔÊ¾À²À²À²À²À²À²À²*/
+  
+
+    
+/*±³¾°*/
+    #newtab-vertical-margin{
+    background: url("chrome://userchromejs/content/newtab-images/1.png");/*1µ½3*/
+    background-color: #E8EDF1;
+    color: rgb(0, 0, 0)
+    background-color:#fafafa;
+    background-size: cover;
+}*×Ô¶¨±³¾°*/
+   /*#newtab-vertical-margin {
+    background-color: #E8EDF1;
+    background: url(http://area.sinaapp.com/bingImg?daysAgo=2);/*http://area.sinaapp.com/bingImg*/
+    /*background-size:cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index:0;
+}*ÔÚÏßÃ¿ÈÕbing±³¾°*/ 
+    
+
+    
+/*Êó±êÐüÍ£Í¼±êÍâ·¢¹â*/
+.newtab-site:hover{box-shadow:0 0px 15px #D1DB6F !important;} 
+    
+
+    
+/*²¦ºÅÇøÓò³ß´ç¡¢Î»ÖÃ*/
+#newtab-grid{
+    max-width: 1200px !important;
+    max-height: 340px !important;
+    margin-top: 20px;
+}
+
+    
+    
+/*²¦ºÅ³ß´ç¡¢¼ä¸ô*/
+#newtab-grid > .newtab-cell{
+    width: 65px;
+    height: 65px;
+    margin: 8px 8px;
+}
+
+    
+    
+/*·½¿éÔ²½Ç*/    
+.newtab-site {border-radius: 30%;}
+
+    
+/*²¦ºÅÔ²½Ç*/
+.newtab-cell,.newtab-link,.newtab-thumbnail {
+    border-radius: 30%;
+}
+
+
+    
+/*²¦ºÅÈ¥±ß¿ò*/
+.newtab-site {
+  box-shadow: none !important;
+  border:none !important;
+}
+    
+
+    
+/*ÐüÍ£±ß¿ò*/
+.newtab-cell:not([ignorehover]) .newtab-control:hover ~ .newtab-link,
+.newtab-cell:not([ignorehover]) .newtab-link:hover,
+.newtab-site[dragged] {
+  box-shadow: none !important;
+  border:none !important;
+  margin: -2px;
+}
+
+
+    
+/*Õ¾µãÃû*/
+.newtab-title {
+    background-color: rgba(25, 25, 25, 0.55) !important;
+    color:silver!important;
+    text-align:center !important;
+    line-height:17px!important;
+    padding:0px 0px!important;
+    border:none !important;
+    border-radius: 0px !important;
+    font-size: 10px !important;
+}
+.newtab-title:before {
+    display:none!important;
+}
+
+
+/* ËÑË÷¿ò*/
+#newtab-search-text {
+  box-shadow: none;
+  background-color: #9DA8A9;
+  border-color: #3399ff;
+  padding-left: 5px;
+  border-radius: 7px;
+}
+#newtab-search-text:focus,
+#newtab-search-text[autofocus] {
+  background-color: #9DA8A9;
+  border-color: #3399ff;
+  border-radius: 7px;
+}
+#newtab-search-submit {
+  display: none !important;
+}
+#searchSuggestionTable {display: none !important;}/*¸ü¸ÄËÑË÷ÒýÇæ*/
+#newtab-search-icon {display: none !important;}/* ËÑË÷¿òico*/
+/*ÂÔÍ¸Ã÷*/
+#newtab-search-text {opacity: 0.15!important;}
+/*¸ß¶È¿í¶È*/
+#newtab-search-form {max-width: 580px;max-height: 30px!important;}
+
+    
+/*about£ºnewtab ICO*/
+.newtab-thumbnail {
+  height: auto;
+}/*ÂèµÄ£¬¸ÄÄÇÃ´¾Ã£¬ÄáÂêauto height¸ã¶¨Í¼±ê²»¶ÔÆë FuckFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF*/
+/*ËõÂÔÍ¼*/
+    [href*="www.google.com"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/google.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    }
+    [href*="www.haosou.com"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/360.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    }
+    [href*="www.douban.com"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/douban2.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    }
+    [href*="bbs.kafan.cn"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/kafan.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    }
+    [href*="www.zhihu.com"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/zhihu.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    }
+    [href*="www.quora.com"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/quora.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    }
+    [href*="www.economist.com"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/economist.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    } 
+    [href*="wikipedia.org"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/wiznote.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    }
+    [href*="www.cnn.com"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/cnn1.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    }
+    [href*="www.linkedin.com"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/pulse1.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    }
+    [href*="weibo.com"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/weibo1.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    }
+    [href*="cnbeta.com"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/CNBETA.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    }
+    [href*="www.wooyun.org"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/WOOYUN.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    }
+    [href*="mail.google.com"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/GMAIL.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    }
+    [href*="mail.ru"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/RUMAIL.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    }
+    [href*="outlook.live.com"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/HOTMAIL.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    }
+    [href*="guerrillamail.com"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/HMAIL.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    }
+    [href*="10minutemail.net"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/10MINMAIL.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    }
+    [href*="hk.yahoo.com"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/YAHOO.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    }
+    [href*="www.ebay.com.hk"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/EBAY.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    }
+    [href*="www.yp.com.hk"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/YELLOWPAGE.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    }
+    [href*="www.oschina.net"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/oschina.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    }
+    [href*="git.oschina.net"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/mayun.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    }
+    [href*="mega.nz"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/mega.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    }
+    [href*="github.com"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/github.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    }
+    [href*="www.w3school.com.cn"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/w3school.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    }
+    [href*="www.mycodes.net"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/yuanma.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    }
+    [href*="pan.baidu.com"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/pan.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    }
+    [href*="yunpan.360.cn"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/360.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    }
+    [href*="www.weiyun.com"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/weiyun.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    }
+    [href*="greasyfork.org"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/greasyfork.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    }
+    [href*="sleazyfork.org"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/greasyforkadult.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    }
+    [href*="www.pt80.net"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/pt80.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    }
+    [href*="www.pcbeta.com"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/pcbeta.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    }
+    [href*="userstyles.org"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/userstyles.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    }
+    [href*="www.youtube.com"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/YouTube.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    }
+    [href*="music.163.com/"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/music.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    }
+    [href*="tieba.baidu.com"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/tieba2.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    }   
+    [href*="twitter.com"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/Twitter.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    }    
+    [href*="plus.google.com"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/googleplus.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    }    
+    [href*="mail.qq.com"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/mail.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    }    
+    [href*="www.guokr.com"] .newtab-thumbnail {
+        background: rgba(0, 0, 0, .05) url("chrome://userchromejs/content/newtab-images/guokr.png") center center no-repeat !important;
+        background-size: 100% 100%!important;
+    }    
+}
